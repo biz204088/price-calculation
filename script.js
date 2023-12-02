@@ -121,12 +121,6 @@ function calculatePrice() {
     resultDiv.appendChild(table);
     table.style.display = 'table';
 
-    if (bestDealCell) {
-        var bestDealTag = createDiscountTag('Best Deal', bestDealDiscount, '#83BC5F');
-        bestDealTag.className += ' best-deal-tag';
-        bestDealCell.appendChild(bestDealTag);
-    }
-
     var detailsToggle = document.getElementById('detailsToggle');
     detailsToggle.checked = false;
     updateDetailsVisibility(false);
