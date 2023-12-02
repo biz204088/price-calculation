@@ -80,17 +80,7 @@ function calculatePrice() {
             var totalDiscountPercentage = (userDiscount + termDiscount) * 100;
             var totalDiscountValue = userDiscountAmount + termDiscountAmount;
 
-            if (totalDiscountPercentage > bestDealDiscount || (totalDiscountPercentage === bestDealDiscount && term > bestDealTerm)) {
-                bestDealDiscount = totalDiscountPercentage;
-                bestDealTerm = term;
-                if (bestDealCell) {
-                    var existingBestDealTag = bestDealCell.querySelector('.best-deal-tag');
-                    if (existingBestDealTag) {
-                        bestDealCell.removeChild(existingBestDealTag);
-                    }
-                }
-                bestDealCell = cell;
-            }
+    
 
             var detailsDiv = document.createElement('div');
             detailsDiv.className = 'price-details';
